@@ -16,6 +16,8 @@
 
 ## 軟體類
 
+* [RabbitMQ Windows 下載安裝](software/rabbitMQ/rabbitMQ_安裝.md)
+
 * [Kafka Windows 下載安裝](software/kafka/Kafka_windows_安裝.md)
 
 * [Kafka Consumer 無法跨機連接 Broker](software/kafka/Kafka_Consumer_跨機連接_Broker.md)
