@@ -16,7 +16,11 @@
 
 ## 軟體類
 
+* [Kafka Windows 下載安裝](software/kafka/Kafka_windows_安裝.md)
+
 * [Kafka Consumer 無法跨機連接 Broker](software/kafka/Kafka_Consumer_跨機連接_Broker.md)
+
+* [activeMQ Windows 下載安裝](software/activeMQ/activeMQ_安裝.md)
 
 <br>
 
