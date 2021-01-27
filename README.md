@@ -49,3 +49,13 @@
 ## 系統類
 
 * [Windows 與 Linux 的檔案唯一識別方法，以及 Linux 的 file createTime](OS/windows&linuxFileID)
+
+<br>
+
+---
+
+<br>
+
+## 資料庫類
+
+* [Postgres FDW](DB/postgres_fdw)
