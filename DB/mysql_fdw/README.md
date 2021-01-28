@@ -139,13 +139,12 @@ psql -d nba -U lbj
 
 建立 mysql_fdw extension：
 
-<br>
+
 
 ```sql
 CREATE EXTENSION mysql_fdw;
 ```
 
-<br>
 
 ![6](imgs/6.jpg)
 
