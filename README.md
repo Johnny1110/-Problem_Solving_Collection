@@ -59,3 +59,5 @@
 ## 資料庫類
 
 * [Postgres FDW](DB/postgres_fdw)
+
+* [Postgres FDW 存取 MySQL](DB/mysql_fdw)
