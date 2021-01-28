@@ -194,3 +194,13 @@ SELECT * FROM foreign_mysql_table;
 
 <br>
 <br>
+
+這個時候如果我們嘗試 `INSERT` 資料的話，會得到以下錯誤訊息：
+
+```
+ERROR:  first column of remote table must be unique for INSERT/UPDATE/DELETE operation
+```
+
+<br>
+
+如果要使用 fdw 對 mysql 做新增動作，必須要讓表的 first column 是 unique。
