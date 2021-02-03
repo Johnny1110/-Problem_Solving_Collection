@@ -61,3 +61,5 @@
 * [Postgres FDW](DB/postgres_fdw)
 
 * [Postgres FDW 存取 MySQL](DB/mysql_fdw)
+
+* [Postgres 與 JDBC_FDW](DB/jdbc_fdw/README.md)
