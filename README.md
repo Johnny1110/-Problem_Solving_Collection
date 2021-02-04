@@ -62,4 +62,4 @@
 
 * [Postgres FDW 存取 MySQL](DB/mysql_fdw)
 
-* [Postgres 與 JDBC_FDW](DB/jdbc_fdw/README.md)
+* [Postgres 與 JDBC_FDW 編譯安裝](DB/jdbc_fdw/README.md)
