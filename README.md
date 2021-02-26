@@ -24,6 +24,8 @@
 
 * [activeMQ Windows 下載安裝](software/activeMQ/ActiveMQ_安裝.md)
 
+* [Trino 入門](software/trino/basic/README.md)
+
 <br>
 
 ---
