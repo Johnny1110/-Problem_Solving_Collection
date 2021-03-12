@@ -66,6 +66,8 @@
 
 * [Postgres 與 JDBC_FDW 編譯安裝](DB/jdbc_fdw/README.md)
 
+* [Postgres 安裝 Multicorn](DB/multicorn/README.md)
+
 ---
 
 <br>
