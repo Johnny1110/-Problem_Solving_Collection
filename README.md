@@ -66,7 +66,9 @@
 
 * [Postgres 與 JDBC_FDW 編譯安裝](DB/jdbc_fdw/README.md)
 
-* [Postgres 安裝 Multicorn](DB/multicorn/README.md)
+* [Postgres 安裝 Multicorn](DB/multicorn/install/README.md)
+
+* [Postgres 使用 Multicorn 的 CsvFdw](DB/multicorn/CsvFdw/README.md)
 
 ---
 
