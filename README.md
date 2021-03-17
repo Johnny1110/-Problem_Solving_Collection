@@ -70,6 +70,8 @@
 
 * [Postgres 使用 Multicorn 的 CsvFdw](DB/multicorn/CsvFdw/README.md)
 
+* [Postgres fdw 合併查詢](DB/multicorn/FDW_inner_join/README.md)
+
 ---
 
 <br>
