@@ -72,6 +72,8 @@
 
 * [Postgres fdw 合併查詢](DB/multicorn/FDW_inner_join/README.md)
 
+* [Hadoop 基礎安裝教學](HDFS/install/README.md)
+
 ---
 
 <br>
