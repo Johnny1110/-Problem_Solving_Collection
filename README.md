@@ -26,6 +26,8 @@
 
 * [Trino 入門](software/trino/basic/README.md)
 
+* [VirtualBox 主機剪貼簿共享](software/virtualbox/shareNotebook/README.md)
+
 <br>
 
 ---
