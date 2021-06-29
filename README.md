@@ -76,6 +76,8 @@
 
 * [Hadoop 基礎安裝教學](HDFS/install/README.md)
 
+* [Ubuntu 20.04 安裝 MySQL](DB/MySQL_install/README.md)
+
 ---
 
 <br>
