@@ -272,3 +272,79 @@ mysql -u root -p
 
 成功。
 
+<br>
+
+---
+
+<br>
+
+## 補充
+
+<br>
+
+有些時候，你會需要以主機名稱 (hostname) 或者 IP 位址來連入 MySQL，要想實現這樣的操作，需要對 MySQL 進行一些設定。
+
+<br>
+
+我們可以先查詢一下 host：
+
+<br>
+
+```bash
+SELECT host FROM mysql.user WHERE User = 'root';
+```
+
+<br>
+
+![6](imgs/6.jpg)
+
+<br>
+
+允許 master（我的主機名稱） 使用 root 帳號連線 mysql，（password 是我的 db 密碼）。
+
+<br>
+
+```sql
+mysql> CREATE USER 'root'@'master' IDENTIFIED BY 'password';
+```
+
+<br>
+
+開放權限給 `'root'@'master'`：
+
+<br>
+
+```sql
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'master';
+```
+
+<br>
+
+
+<br>
+
+以上的動作都完成之後，來查詢驗證一下：
+
+```sql
+SELECT host FROM mysql.user WHERE User = 'root';
+```
+
+<br>
+
+![7](imgs/7.jpg)
+
+<br>
+
+除此之外還需要開通 `mysql_native_password`：
+
+<br>
+
+```sql
+mysql> ALTER USER 'root'@'master' IDENTIFIED WITH mysql_native_password BY 'password';
+```
+
+<br>
+
+通果以上設定，我們就可以通過 `master` 這個 hostname 連線 mysql 了。
+
+
