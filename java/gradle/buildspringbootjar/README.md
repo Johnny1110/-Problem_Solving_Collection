@@ -113,3 +113,24 @@ build 出來的 jar 檔在這裡：
 <br>
 
 完成。
+
+
+<br>
+
+
+---
+
+<br>
+
+事實上也可以用 Cli 的方式建構 Jar 檔：
+
+<br>
+
+```cli
+gradle clean
+gradle bootJar
+```
+
+<br>
+
+![6](imgs/6.jpg)
