@@ -38,6 +38,10 @@
 
 <br>
 
+* [Gradle 7 打包 Spring boot Jar 檔(使用 idea)](java/gradle/buildspringbootjar/README.md)
+
+<br>
+
 ---
 
 <br>
