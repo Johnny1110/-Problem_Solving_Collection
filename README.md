@@ -92,4 +92,6 @@
 
 * [黑沙自動買菜按鍵精靈](others/autoKeys)
 
+* [通用型 Json 解析器](others/genericJsonParser/README.md)
+
 
