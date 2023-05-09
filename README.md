@@ -96,6 +96,8 @@
 
 * [通用型 JSON 資料解析器](json/genericJsonParser/README.md)
 
+* [指定路徑 JSON 解析器](json/targetPathJsonParser/README.md)
+
 ---
 
 <br>
@@ -104,6 +106,6 @@
 
 * [黑沙自動買菜按鍵精靈](others/autoKeys)
 
-* [通用型 Json 解析器](others/genericJsonParser/README.md)
+
 
 
