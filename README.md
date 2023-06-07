@@ -104,6 +104,8 @@
 
 * [讓 git 永久忽略某個文件的方法 (不使用 .gitignore)](git/assume-unchanged/README.md)
 
+* [git 我常用的 alias](git/alias/README.md)
+
 ---
 
 <br>
