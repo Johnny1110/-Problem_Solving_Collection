@@ -88,8 +88,6 @@
 
 ---
 
-
-
 <br>
 
 ## JSON
@@ -97,6 +95,14 @@
 * [通用型 JSON 資料解析器](json/genericJsonParser/README.md)
 
 * [指定路徑 JSON 解析器](json/targetPathJsonParser/README.md)
+
+---
+
+<br>
+
+## Git
+
+* [讓 git 永久忽略某個文件的方法 (不使用 .gitignore)](git/genericJsonParser/README.md)
 
 ---
 
