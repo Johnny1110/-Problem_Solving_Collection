@@ -24,3 +24,8 @@ git 解除永久忽略某文件：
 ```
 git update-index --no-assume-unchanged <file>
 ```
+
+<br>
+<br>
+
+永久忽略某文件後，無論如和改動該文件，git 每次 add commit 時都不會管這份文件。

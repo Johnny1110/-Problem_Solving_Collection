@@ -102,7 +102,7 @@
 
 ## Git
 
-* [讓 git 永久忽略某個文件的方法 (不使用 .gitignore)](git/genericJsonParser/README.md)
+* [讓 git 永久忽略某個文件的方法 (不使用 .gitignore)](git/assume-unchanged/README.md)
 
 ---
 
