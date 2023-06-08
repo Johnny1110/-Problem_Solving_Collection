@@ -40,6 +40,8 @@
 
 * [Gradle 7 打包 Spring boot Jar 檔(使用 idea)](java/gradle/buildspringbootjar/README.md)
 
+* [protobuf 的 maven 配置](java/protobuf/maven/README.md)
+
 <br>
 
 ---
