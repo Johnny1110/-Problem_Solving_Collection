@@ -165,3 +165,7 @@ service OrderStatusService {
 
 執行 plugin 的 compile 就可以得到編譯過後的文件
 
+```
+mvn protobuf:compile
+```
+
