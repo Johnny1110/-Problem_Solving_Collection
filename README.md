@@ -40,7 +40,7 @@
 
 * [Gradle 7 打包 Spring boot Jar 檔(使用 idea)](java/gradle/buildspringbootjar/README.md)
 
-* [建構一個簡單的 java gRPC 完整範例](java/gRPC/grpc_node_1/README.md)
+* [建構一個簡單的 java gRPC 完整範例](java/gRPC/grpc_node_1)
 
 <br>
 
