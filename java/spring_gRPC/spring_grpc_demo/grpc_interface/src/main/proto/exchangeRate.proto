@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package com.gash.grpc.lib;
+
+option java_generic_services = true;
+option java_multiple_files = true;
+option java_package = "com.gash.grpc.lib";
+
+// The greeting service definition.
+service ExchangeRateQueryService {
+  // Sends a greeting
+  rpc getExchangeRate (ExchangeRateReq) returns (ExchangeRateResp) {
+  }
+}
+
+// The request message containing the user's name.
+message ExchangeRateReq {
+  string currencyCode = 1;
+  string exchangeCurrencyCode = 2;
+}
+
+// The response message containing the greetings
+message ExchangeRateResp {
+  string msgCode = 1; // 000000 成功 99999 失敗
+  string currencyCode = 2;
+  string exchangeCurrencyCode = 3;
+  string price = 4;
+  string priceHigh24h = 5;
+  string priceLow24h = 6;
+  int64 unixTime = 7;
+}

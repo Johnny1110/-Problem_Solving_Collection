@@ -42,6 +42,8 @@
 
 * [建構一個簡單的 java gRPC 完整範例](java/gRPC/grpc_node_1)
 
+* [建構一個 Spring Boot gRPC 完整範例](java/spring_gRPC/spring_grpc_demo)
+
 <br>
 
 ---
