@@ -1,0 +1,10 @@
+profile: stage
+
+schedule_manager:
+  query_data_interval_sec: 86400
+  redis_data_ttl: 60
+  container_qty: 3
+  shutdown_holding_time: 60
+
+
+
