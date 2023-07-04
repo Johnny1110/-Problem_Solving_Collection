@@ -91,7 +91,7 @@
 
 1. 更新子專案：
    ```
-   git submodule update –-recursive –-remote
+   git submodule update --recursive --remote
    ```
    此命令會更新子專案的代碼。如果子專案的版本已經更新，你需要運行此命令來獲取最新的代碼。
 
