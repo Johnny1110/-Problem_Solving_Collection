@@ -124,3 +124,18 @@
    git clone --recurse-submodules <repository_url>
    ```
    如果你要克隆一個包含子專案的項目，請使用 `--recurse-submodules` 選項，這樣Git將自動初始化和更新所有子專案。
+
+<br>
+<br>
+<br>
+<br>
+
+---
+
+<br>
+
+更多關於 __刪除子專案__，或者 __主專案套用子專案某一分支__ 請參考 https://www.astralweb.com.tw/use-submodule-to-manage-git-subproject/
+
+<br>
+
+---
