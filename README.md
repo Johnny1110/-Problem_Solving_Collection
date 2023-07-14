@@ -42,7 +42,9 @@
 
 * [建構一個簡單的 java gRPC 完整範例](java/gRPC/grpc_node_1)
 
-* [建構一個 Spring Boot gRPC 完整範例](java/spring_gRPC/spring_grpc_demo)
+* [建構一個 Spring Boot gRPC 完整範例(使用第三方框架)](java/spring_gRPC/spring_grpc_demo)
+
+* [建構一個 Spring Boot gRPC 完整範例(手刻)](java/spring_boot_grpc_hand_make)
 
 * [建構一個在 k8s 上運行的多排程管理系統(多 pods 情形)](java/k8s/schedule_manager)
 
