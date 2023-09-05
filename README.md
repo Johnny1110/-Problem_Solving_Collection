@@ -122,6 +122,14 @@
 
 <br>
 
+## Oauth2
+
+* [社交帳號登入資源整理](oauth2/social_account_doc/README.md)
+
+---
+
+<br>
+
 ## 其他類
 
 * [黑沙自動買菜按鍵精靈](others/autoKeys)
