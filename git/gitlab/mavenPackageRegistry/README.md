@@ -16,6 +16,8 @@ https://docs.gitlab.com/ee/user/packages/maven_repository
 
 開始前需要建立一個 gitlab 的 maven 專案，這裡就不展示如何建立專案了，直接開始。
 
+__還有要注意的是，我使用的是 oracle jdk 1.8 版本，好心同事提醒說 jdk 版本好像會對部屬造成影響，至少我目前 1.8 版本是可行的。__
+
 <br>
 <br>
 
@@ -28,7 +30,7 @@ https://docs.gitlab.com/ee/user/packages/maven_repository
 
 <br>
 
-首先需要登入 gitlab，對需要做私有倉庫的專案申請 2 組 depoly token，先說明這兩組帳號用途:
+首先需要登入 gitlab，對需要做私有倉庫的專案 __申請 2 組 depoly token__，先說明這兩組帳號用途:
 
 token-1: 具有 __讀寫__ 權限的 read_write_token (給套件開發者用)
 
