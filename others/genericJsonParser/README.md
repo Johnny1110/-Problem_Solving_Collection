@@ -12,13 +12,14 @@
 
 ```json
 {
-  "data": "{
-    'date': '2023-11-11',
-     'user_list': [
-        {'name': 'Johnny', 'age': 24, 'skills': ['java', 'python']},
-        {'name': 'Jerry', 'age': 25, 'skills': ['js', 'asp.net']},
-        {'name': 'Monica', 'age': 26, 'skills': ['SQL']},
-        {'name': 'Ray', 'age': 27, 'skills': ['無敵1', '無敵2']}]}"
+  "data": "{'date': '2023-11-11', 
+  'user_list': [
+    {'name': 'Johnny', 'age': 24, 'skills': ['java', 'python']},
+    {'name': 'Jerry', 'age': 24, 'skills': ['js', 'asp.net']}, 
+    {'name': 'Monica', 'age': 26, 'skills': ['SQL']}, 
+    {'name': 'Ray', 'age': 27, 'skills': ['無敵1', '無敵2']}
+    ]}
+    ]}"
 }
 ```
 
