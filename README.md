@@ -118,6 +118,8 @@
 
 * [git 子專案（套娃）](git/submodule/README.md)
 
+* [使用 gitlab 搭建 maven 倉庫 (Maven packages in the package registry)](git/gitlab/mavenPackageRegistry/README.md)
+
 ---
 
 <br>
