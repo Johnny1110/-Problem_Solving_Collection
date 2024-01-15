@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: local-grpc-client
+
+server:
+  port: 8081
+
+grpc:
+  client:
+    target_server:
+      host: 127.0.0.1
+      port: 50051

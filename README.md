@@ -40,6 +40,14 @@
 
 * [Gradle 7 打包 Spring boot Jar 檔(使用 idea)](java/gradle/buildspringbootjar/README.md)
 
+* [建構一個簡單的 java gRPC 完整範例](java/gRPC/grpc_node_1)
+
+* [建構一個 Spring Boot gRPC 完整範例(使用第三方框架)](java/spring_gRPC/spring_grpc_demo)
+
+* [建構一個 Spring Boot gRPC 完整範例(手刻)](java/spring_boot_grpc_hand_make)
+
+* [建構一個在 k8s 上運行的多排程管理系統(多 pods 情形)](java/k8s/schedule_manager)
+
 <br>
 
 ---
@@ -86,6 +94,38 @@
 
 * [資料庫的：4 種交易屬性，5 種隔離級別，7 種傳播行為](DB/457/README.md)
 
+* [索引的設計與雷區](DB/index/README.md)
+
+---
+
+<br>
+
+## JSON
+
+* [通用型 JSON 資料解析器](json/genericJsonParser/README.md)
+
+* [指定路徑 JSON 解析器](json/targetPathJsonParser/README.md)
+
+---
+
+<br>
+
+## Git
+
+* [讓 git 永久忽略某個文件的方法 (不使用 .gitignore)](git/assume-unchanged/README.md)
+
+* [git 我常用的 alias](git/alias/README.md)
+
+* [git 子專案（套娃）](git/submodule/README.md)
+
+---
+
+<br>
+
+## Oauth2
+
+* [社交帳號登入資源整理](oauth2/social_account_doc/README.md)
+
 ---
 
 <br>
@@ -94,6 +134,8 @@
 
 * [黑沙自動買菜按鍵精靈](others/autoKeys)
 
-* [通用型 Json 解析器](others/genericJsonParser/README.md)
+* [GRPC Server 關於保持連線設定](others/grpcServerKeepAlive)
+
+
 
 

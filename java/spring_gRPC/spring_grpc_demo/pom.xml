@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.frizo</groupId>
+    <artifactId>spring_grpc_demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Spring gRPC Demo</name>
+
+    <modules>
+        <!--interface 項目 包含原始 protobuf 文件並生成 java model 和 service 類。你可能會在不同的項目中會共享這個部分-->
+        <module>grpc_interface</module>
+        <!--Server 項目 包含項目的業務實現，並使用上面的 Interface 項目作為依賴項-->
+        <module>grpc_server</module>
+        <!--Client 项目（可选，可能很多） 任何使用预生成的 stub 来访问服务器的客户端项目-->
+        <module>grpc_client</module>
+    </modules>
+
+    <properties>
+        <spring.boot.version>2.7.0</spring.boot.version>
+        <protobuf.version>3.19.1</protobuf.version>
+        <protobuf-plugin.version>0.6.1</protobuf-plugin.version>
+        <grpc.version>1.42.1</grpc.version>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+        <maven.compiler.version>3.8.1</maven.compiler.version>
+        <maven.resource.version>3.1.0</maven.resource.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+<!--            <dependency>-->
+<!--                <groupId>io.grpc</groupId>-->
+<!--                <artifactId>grpc-netty-shaded</artifactId>-->
+<!--                <version>${grpc.version}</version>-->
+<!--            </dependency>-->
+
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-stub</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-protobuf</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+
+            <!-- necessary for Java 9+ -->
+            <!--java 低于 1.8 的版本不需要此依賴-->
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>annotations-api</artifactId>
+                <version>6.0.53</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.devh</groupId>
+                <artifactId>grpc-server-spring-boot-starter</artifactId>
+                <version>2.14.0.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.devh</groupId>
+                <artifactId>grpc-client-spring-boot-starter</artifactId>
+                <version>2.14.0.RELEASE</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+
+        <extensions>
+            <!-- os-maven-plugin：此 plugin 可檢測当前系統信息-->
+            <!-- ${os.detected.classifier}：這個變數可獲取作業系统的版本，如osx-x86_64-->
+            <extension>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>1.7.1</version>
+            </extension>
+        </extensions>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.version}</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven.resource.version}</version>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.version}</version>
+                    <configuration>
+                        <mainClass>#</mainClass>
+                        <layout>ZIP</layout>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.xolstice.maven.plugins</groupId>
+                    <artifactId>protobuf-maven-plugin</artifactId>
+                    <version>0.6.1</version>
+                    <configuration>
+                        <protocArtifact>com.google.protobuf:protoc:3.11.0:exe:${os.detected.classifier}</protocArtifact>
+                        <pluginId>grpc-java</pluginId>
+                        <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.29.0:exe:${os.detected.classifier}
+                        </pluginArtifact>
+                        <!--proto 原文件路徑-->
+                        <protoSourceRoot>${project.basedir}/src/main/proto</protoSourceRoot>
+                        <!--proto 編譯生成目標 java 文件路徑-->
+                        <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                        <!--設定是否在生成 java 文件之前清空 outputDirectory 的文件，默認為 true，設定成 false 也會覆蓋同名文件-->
+                        <clearOutputDirectory>false</clearOutputDirectory>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>compile</goal>
+                                <goal>compile-custom</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
