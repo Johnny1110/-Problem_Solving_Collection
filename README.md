@@ -48,6 +48,8 @@
 
 * [建構一個在 k8s 上運行的多排程管理系統(多 pods 情形)](java/k8s/schedule_manager)
 
+* [如何線上排查 java 服務(CPU 使用率爆高，應用當機)](java/maintain/debug_online)
+
 <br>
 
 ---
