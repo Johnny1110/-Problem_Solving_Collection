@@ -39,11 +39,11 @@
 
 3. 申請靜態 IP。
 
-4. 調整 VCP 網路防火牆設定。
+4. 調整 VPC 網路防火牆設定。
 
-4. 使用 Domain Cloud 服務註冊一個 Domain。
+4. 使用 Cloud Domains 服務註冊一個 Domain。
 
-5. 使用 DNS Cloud 服務登記靜態 IP 與 Domain。
+5. 使用 Cloud DNS 服務登記靜態 IP 與 Domain。
 
 
 <br>
@@ -423,6 +423,8 @@ dff891769931   gitlab/gitlab-runner:latest   "/usr/bin/dumb-init …"   3 hours 
 
 <br>
 
+為我們的 VM 申請一組靜態 IP，這樣服務重啟後 IP 也不會變，也是為了後面註冊 DNS 做準備。
+
 進到虛擬私有雲網路設定：
 
 ![13](imgs/13.jpg)
@@ -446,7 +448,7 @@ dff891769931   gitlab/gitlab-runner:latest   "/usr/bin/dumb-init …"   3 hours 
 <br>
 <br>
 
-## 4. 調整 VCP 網路防火牆設定
+## 4. 調整 VPC 網路防火牆設定
 
 <br>
 
@@ -492,5 +494,109 @@ __這裡要小心，不要打到 https 去，我們並沒有設定 SSL。__ 用 
 <br>
 
 
-## 使用 Domain Cloud 服務註冊一個 Domain。
+## 4. 使用 Cloud Domains 服務註冊一個 Domain
 
+<br>
+
+註冊域名，費用大概一年約 12 美金左右。
+
+<br>
+
+![19](imgs/19.jpg)
+
+
+設定資料：
+
+![20](imgs/20.jpg)
+
+後面會要求設定聯絡資料名稱，國家電話，地址等等，這邊就不一一贅述了。
+
+都填好後按註冊。
+
+__註冊完成後記得去填入的郵箱中驗證郵箱，不然 15 天候 Domain 作廢。__
+
+<br>
+<br>
+<br>
+<br>
+
+---
+
+<br>
+<br>
+<br>
+<br>
+
+## 5. 使用 Cloud DNS 服務登記靜態 IP 與 Domain
+
+<br>
+
+來到 Cloud DNS 服務，建立可用區，綁定 VM 的 靜態 IP 與 剛剛註冊好的 Domain
+
+<br>
+
+![21](imgs/21.jpg)
+
+<br>
+
+把值填上去
+
+![22](imgs/22.jpg)
+
+
+<br>
+
+之後會來到 區域詳細資料 頁面，我們需要新增兩個標準：
+
+<br>
+
+建立第一個標準：
+
+![23](imgs/23.jpg)
+
+* 資料記錄類型選擇：__A__
+* IPv4 位址選我們建立好的靜態 IP 位置。
+* 建立
+
+<br>
+<br>
+
+
+![24](imgs/24.jpg)
+
+<br>
+<br>
+
+建立第二個標準 :
+
+![25](imgs/25.jpg)
+
+* 資源紀錄類型選:__CNAME__
+* DNS 名稱加上 www
+* 正規名稱打完整 Domain
+* 建立
+
+<br>
+
+把原本用靜態 IP 訪問 /healthchech 改用 Domain 試試：
+
+http://frizo-lab.com:8080/lab/healthcheck
+
+<br>
+
+![26](imgs/26.jpg)
+
+<br>
+<br>
+<br>
+<br>
+
+
+---
+
+<br>
+<br>
+<br>
+<br>
+
+以上大功告成 !
