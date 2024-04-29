@@ -68,6 +68,8 @@
 
 * [Windows 與 Linux 的檔案唯一識別方法，以及 Linux 的 file createTime](OS/windows&linuxFileID)
 
+* [完整從建構 CI/CD 到設定 DNS 與 Domain 申請（gitab-cicd, GCP）](OS/cicd)
+
 <br>
 
 ---
