@@ -28,6 +28,8 @@
 
 * [VirtualBox 主機剪貼簿共享](software/virtualbox/shareNotebook/README.md)
 
+* [Kafka Docker Cluster 部屬](software/kafka/docker_cluster.md)
+
 <br>
 
 ---
