@@ -171,5 +171,43 @@ docker-compose up -d
 
 ![13](imgs/13.jpg)
 
+<br>
+<br>
+<br>
+<br>
+
+## 建立測試生產者
+
+```bash
+docker exec -it kafka1 /bin/bash
+
+kafka-console-producer --topic=test-topic --broker-list kafka1:9092,kafka2:9093,kafka3:9094
+```
+
+<br>
+<br>
+<br>
+<br>
+
+## 建立測試消費者
+
+```bash
+docker exec -it kafka2 /bin/bash
+
+kafka-console-consumer --bootstrap-server kafka1:9092,kafka2:9093,kafka3:9094 --from-beginning --topic test-topic
+```
+
+<br>
+<br>
+<br>
+<br>
+
+## 實際測試結果
+
+<br>
+
+![14](imgs/14.jpg)
+
+
 
 
