@@ -102,6 +102,7 @@
 
 * [索引的設計與雷區](DB/index/README.md)
 
+* [統計報表](DB/report/README.md)
 ---
 
 <br>
